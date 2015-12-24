@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>silly</title>
+  <script type="text/javascript">
+    document.addEventListener('keydown', function(event) {
+      console.log(event);
+      if (event.keyCode === 32) {
+        console.log('ho ho ho');
+        document.getElementById('hoHoHo').play();
+      }
+    });
+  </script>
+</head>
+<body>
+  press the santa
+
+  <audio id="hoHoHo" src="audio/ho_ho_ho.wav" preload="auto"></audio>
+</body>
+</html>
