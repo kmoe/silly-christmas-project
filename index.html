@@ -2,17 +2,37 @@
 <html>
 <head>
   <title>silly</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
   <script type="text/javascript">
     document.addEventListener('keydown', function(event) {
+
       if (event.keyCode === 32) {
-        document.getElementById('hoHoHo').play();
+        var randomNumber = Math.floor(Math.random() * 4 + 1);
+        console.log(randomNumber);
+
+        document.getElementById('hoHoHo_' + randomNumber).play();
       }
+
+
+
     });
   </script>
 </head>
 <body>
-  press the santa
+  <div class="container">
 
-  <audio id="hoHoHo" src="audio/ho_ho_ho.m4a" preload="auto"></audio>
+    <div class="jumbotron">
+
+      <h1>press the santa</h1>
+
+    </div>
+
+    <audio id="hoHoHo_1" src="audio/ho_ho_ho_1.m4a" preload="auto"></audio>
+    <audio id="hoHoHo_2" src="audio/ho_ho_ho_2.m4a" preload="auto"></audio>
+    <audio id="hoHoHo_3" src="audio/ho_ho_ho_3.m4a" preload="auto"></audio>
+    <audio id="hoHoHo_4" src="audio/ho_ho_ho_4.m4a" preload="auto"></audio>
+  </div>
 </body>
 </html>
